@@ -1,0 +1,18 @@
+/*
+theme name: MS
+Author: Hatsch Béatrice
+*/
+.navbar{
+    background-color:#000058;
+    
+}
+.navbar ul li a {
+    vertical-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color:white;
+    
+}
+.nav-link{
+    text-decoration: none;
+}
