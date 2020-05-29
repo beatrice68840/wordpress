@@ -3,9 +3,11 @@ theme name: MS
 Author: Hatsch Béatrice
 */
 .navbar{
+    
     background-color:#000058;
     
 }
+
 .navbar ul li a {
     vertical-align: center;
     padding: 10px;
@@ -15,4 +17,8 @@ Author: Hatsch Béatrice
 }
 .nav-link{
     text-decoration: none;
+}
+/* décale les onglets des page dans la navbar*/
+.navbar-brand{
+    padding-right: 600px;
 }

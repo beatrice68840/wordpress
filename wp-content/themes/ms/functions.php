@@ -7,6 +7,8 @@ function ms_supports()
     add_theme_support('menus');
     register_nav_menu('header', 'en tête du menu');
     register_nav_menu('footer', 'pied de page');
+
+    add_image_size('post-thumbnail', 350, 215, true);
 }
 
 function ms_register_assets()
@@ -19,39 +21,47 @@ function ms_register_assets()
     wp_enqueue_script('bootstrap');
 }
 
-function ms_menu_class($classes){
+function ms_menu_class($classes)
+{
 
     $classes[] = 'nav-item';
     return $classes;
 }
 
-function ms_menu_link_class($attrs){
+function ms_menu_link_class($attrs)
+{
 
     $attrs['class'] = 'nav-link';
     return $attrs;
 }
 
-function ms_pagination(){
-
-    echo '<nav aria-label="Pagination">';
+function ms_pagination()
+{
+    $pages = paginate_links(['type' => 'array']);
+    if ($pages === null) {
+        return;
+    }
+    echo '<nav aria-label="Pagination" class="my-4">';
     echo '<ul class="pagination">';
-    $pages = paginate_links(['type' => 'array']); 
-    foreach($pages as $page){
+    $pages = paginate_links(['type' => 'array']);
+    foreach ($pages as $page) {
         $active = strpos($page, 'current') !== false;
         $active = 'page-item';
-        if($active){
+        if ($active) {
             $class = 'active';
-}
-        echo '<li class="'.$class . '">';
+        }
+        echo '<li class="' . $class . '">';
         echo str_replace('page-numbers', 'page-link', $page);
-        echo'</li>';
+        echo '</li>';
     }
-    
+
     echo '</ul>';
     echo '</nav>';
 }
+
 
 add_action('after_setup_theme', 'ms_supports');
 add_action('wp_enqueue_scripts', 'ms_register_assets');
 add_filter('nav_menu_css_class', 'ms_menu_class');
 add_filter('nav_menu_link_attributes', 'ms_menu_class');
+
