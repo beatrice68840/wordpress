@@ -626,7 +626,7 @@ class Premium_Button extends Widget_Base {
                 'scheme'            => Scheme_Typography::TYPOGRAPHY_1,
                 'selector'          => '{{WRAPPER}} .premium-button',
             ]
-            );
+        );
         
         $this->start_controls_tabs('premium_button_style_tabs');
         
@@ -634,7 +634,7 @@ class Premium_Button extends Widget_Base {
             [
                 'label'             => __('Normal', 'premium-addons-for-elementor'),
             ]
-            );
+        );
         
         $this->add_control('premium_button_text_color_normal',
             [

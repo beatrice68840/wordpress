@@ -3,7 +3,7 @@ theme name: MS
 Author: Hatsch Béatrice
 */
 .navbar{
-    
+
     background-color:#000058;
     
 }
@@ -20,5 +20,5 @@ Author: Hatsch Béatrice
 }
 /* décale les onglets des page dans la navbar*/
 .navbar-brand{
-    padding-right: 600px;
+    padding-right: 550px;
 }

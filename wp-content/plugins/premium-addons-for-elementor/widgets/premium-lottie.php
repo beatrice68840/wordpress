@@ -306,6 +306,14 @@ class Premium_Lottie extends Widget_Base {
             ]
         );
 
+        $this->start_controls_tabs('tabs_lottie');
+        
+        $this->start_controls_tab('tab_lottie_normal',
+            [
+                'label'             => __('Normal', 'premium-addons-for-elementor'),
+            ]
+        );
+
         $this->add_control('lottie_background',
             [
                 'label'             => __('Background Color', 'premium-addons-for-elementor'),
@@ -316,21 +324,84 @@ class Premium_Lottie extends Widget_Base {
             ]
         );
 
+        $this->add_control('opacity',
+			[
+				'label'     => __( 'Opacity', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::SLIDER,
+				'range'     => [
+					'px' => [
+						'max'   => 1,
+						'min'   => 0.10,
+						'step'  => 0.01,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .premium-lottie-animation' => 'opacity: {{SIZE}}',
+				],
+			]
+        );
+
+        $this->add_group_control(
+			Group_Control_Css_Filter::get_type(),
+			[
+				'name'      => 'css_filters',
+                'selector'  => '{{WRAPPER}} .premium-lottie-animation',
+			]
+        );
+
+        $this->end_controls_tab();
+
+        $this->start_controls_tab('tab_lottie_hover',
+            [
+                'label'             => __('Hover', 'premium-addons-for-elementor'),
+            ]
+        );
+
         $this->add_control('lottie_hover_background',
             [
-                'label'             => __('Hover Background Color', 'premium-addons-for-elementor'),
+                'label'             => __('Background Color', 'premium-addons-for-elementor'),
                 'type'              => Controls_Manager::COLOR,
                 'selectors'      => [
                     '{{WRAPPER}} .premium-lottie-animation:hover'  => 'background-color: {{VALUE}}',
                 ]
             ]
         );
+
+        $this->add_control('hover_opacity',
+			[
+				'label'     => __( 'Opacity', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::SLIDER,
+				'range'     => [
+					'px' => [
+						'max'   => 1,
+						'min'   => 0.10,
+						'step'  => 0.01,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .premium-lottie-animation:hover' => 'opacity: {{SIZE}}',
+				],
+			]
+        );
         
+        $this->add_group_control(
+			Group_Control_Css_Filter::get_type(),
+			[
+				'name'      => 'hover_css_filters',
+                'selector'  => '{{WRAPPER}} .premium-lottie-animation:hover',
+			]
+        );
+
+        $this->end_controls_tab();
+
+        $this->end_controls_tabs();
+
         $this->add_group_control(
             Group_Control_Border::get_type(), 
             [
                 'name'          => 'lottie_border',
                 'selector'      => '{{WRAPPER}} .premium-lottie-animation',
+                'separator'     => 'before'
             ]
         );
         
@@ -345,23 +416,6 @@ class Premium_Lottie extends Widget_Base {
             ]
         );
 
-        $this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name'      => 'css_filters',
-                'selector'  => '{{WRAPPER}} .premium-lottie-animation',
-			]
-        );
-
-        $this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name'      => 'hover_css_filters',
-                'label'     => __('Hover CSS Filters', 'premium-addons-for-elementor'),
-                'selector'  => '{{WRAPPER}} .premium-lottie-animation:hover',
-			]
-        );
-        
         $this->add_responsive_control('animation_padding',
             [
                 'label'         => __('Padding', 'premium-addons-for-elementor'),

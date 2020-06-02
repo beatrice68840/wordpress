@@ -16,7 +16,7 @@
             isTouch = false,
             $instance = $selector,
             checkTemps = $selector.find(".premium-vscroll-sections-wrap")
-            .length,
+                .length,
             $htmlBody = $("html, body"),
             deviceType = $("body").data("elementor-device-mode"),
             $itemsList = $(".premium-vscroll-dot-item", $instance),
@@ -262,9 +262,9 @@
 
                         }
                     }, {
-                        offset: 0 !== index ? "0%" : "-1%",
-                        triggerOnce: false
-                    }
+                    offset: 0 !== index ? "0%" : "-1%",
+                    triggerOnce: false
+                }
                 );
                 index++;
             }
@@ -507,14 +507,14 @@
             var s = selector.get(0),
                 vpHeight = $window.outerHeight(),
                 clientSize =
-                hidden === true ? s.offsetWidth * s.offsetHeight : true;
+                    hidden === true ? s.offsetWidth * s.offsetHeight : true;
             if (typeof s.getBoundingClientRect === "function") {
                 var rec = s.getBoundingClientRect();
                 var tViz = rec.top >= 0 && rec.top < vpHeight,
                     bViz = rec.bottom > 0 && rec.bottom <= vpHeight,
                     vVisible = partial ? tViz || bViz : tViz && bViz,
                     vVisible =
-                    rec.top < 0 && rec.bottom > vpHeight ? true : vVisible;
+                        rec.top < 0 && rec.bottom > vpHeight ? true : vVisible;
                 return clientSize && vVisible;
             } else {
                 var viewTop = 0,
@@ -537,10 +537,10 @@
 
             if (settings.tooltips) {
                 $(
-                        '<div class="premium-vscroll-tooltip"><span>' +
-                        settings.dotsText[index] +
-                        "</span></div>"
-                    )
+                    '<div class="premium-vscroll-tooltip"><span>' +
+                    settings.dotsText[index] +
+                    "</span></div>"
+                )
                     .hide()
                     .appendTo($this)
                     .fadeIn(200);
@@ -587,8 +587,8 @@
                     .stop()
                     .clearQueue()
                     .animate({
-                            scrollTop: offset
-                        },
+                        scrollTop: offset
+                    },
                         settings.speed,
                         "easeInOutCirc",
                         function () {
@@ -642,8 +642,8 @@
                 $this.addClass("active");
 
                 $htmlBody.animate({
-                        scrollTop: offset
-                    },
+                    scrollTop: offset
+                },
                     settings.speed,
                     "easeInOutCirc",
                     function () {
@@ -654,19 +654,15 @@
         };
 
         self.onKeyUp = function (event, direction) {
+
+            //If keyboard is triggered before scroll
+            if (currentSection === 1) {
+                currentSection = $itemsList.eq(0).data("menuanchor");
+            }
+
             var direction = direction || "up",
-                nextItem = $(
-                    ".premium-vscroll-dot-item[data-menuanchor=" +
-                    currentSection +
-                    "]",
-                    $instance
-                ).next(),
-                prevItem = $(
-                    ".premium-vscroll-dot-item[data-menuanchor=" +
-                    currentSection +
-                    "]",
-                    $instance
-                ).prev();
+                nextItem = $(".premium-vscroll-dot-item[data-menuanchor=" + currentSection + "]", $instance).next(),
+                prevItem = $(".premium-vscroll-dot-item[data-menuanchor=" + currentSection + "]", $instance).prev();
 
             event.preventDefault();
 
@@ -844,8 +840,8 @@
             var windowScrollTop = $window.scrollTop(),
                 lastSectionId = getLastSection(sections),
                 bottomBorder =
-                sections[lastSectionId].offset +
-                sections[lastSectionId].height,
+                    sections[lastSectionId].offset +
+                    sections[lastSectionId].height,
                 visible = self.visible($instance, true, false);
 
             if (windowScrollTop < bottomBorder) {

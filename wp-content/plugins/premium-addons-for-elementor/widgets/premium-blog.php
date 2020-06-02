@@ -1003,7 +1003,7 @@ class Premium_Blog extends Widget_Base {
                 'label'         => __('Overlay Color', 'premium-addons-for-elementor'),
                 'type'          => Controls_Manager::COLOR,
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-blog-framed-effect, {{WRAPPER}} .premium-blog-bordered-effect,{{WRAPPER}} .premium-blog-squares-effect:before,{{WRAPPER}} .premium-blog-squares-effect:after,{{WRAPPER}} .premium-blog-squares-square-container:before,{{WRAPPER}} .premium-blog-squares-square-container:after, {{WRAPPER}} .premium-blog-format-container:hover, {{WRAPPER}} .premium-blog-thumbnail-overlay' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .premium-blog-framed-effect, {{WRAPPER}} .premium-blog-bordered-effect, {{WRAPPER}} .premium-blog-squares-effect:before,{{WRAPPER}} .premium-blog-squares-effect:after,{{WRAPPER}} .premium-blog-squares-square-container:before,{{WRAPPER}} .premium-blog-squares-square-container:after, {{WRAPPER}} .premium-blog-format-container:hover, {{WRAPPER}} .premium-blog-thumbnail-overlay' => 'background-color: {{VALUE}};',
                 ]
             ]
         );
@@ -1082,7 +1082,7 @@ class Premium_Blog extends Widget_Base {
                     'value' => Scheme_Color::COLOR_2,
                 ],
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-blog-format-container i, {{WRAPPER}} .premium-blog-thumbnail-overlay a'  => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .premium-blog-format-container i, {{WRAPPER}} .premium-blog-thumbnail-overlay i'  => 'color: {{VALUE}};',
                 ]
             ]
         );
@@ -1096,7 +1096,7 @@ class Premium_Blog extends Widget_Base {
                     'value' => Scheme_Color::COLOR_1,
                 ],
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-blog-format-container:hover i, {{WRAPPER}} .premium-blog-thumbnail-overlay a:hover'  => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .premium-blog-format-container:hover i, {{WRAPPER}} .premium-blog-thumbnail-overlay i:hover'  => 'color: {{VALUE}};',
                 ]
             ]
         );
@@ -1110,7 +1110,7 @@ class Premium_Blog extends Widget_Base {
                     'value' => Scheme_Color::COLOR_1,
                 ],
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-blog-format-container, {{WRAPPER}} .premium-blog-thumbnail-overlay a'  => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .premium-blog-format-container, {{WRAPPER}} .premium-blog-thumbnail-overlay i'  => 'background-color: {{VALUE}};',
                 ]
             ]
         );
@@ -1124,7 +1124,7 @@ class Premium_Blog extends Widget_Base {
                     'value' => Scheme_Color::COLOR_2,
                 ],
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-blog-format-container:hover, {{WRAPPER}} .premium-blog-thumbnail-overlay a:hover'  => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .premium-blog-format-container:hover, {{WRAPPER}} .premium-blog-thumbnail-overlay i:hover'  => 'background-color: {{VALUE}};',
                 ]
             ]
         );
@@ -1133,7 +1133,7 @@ class Premium_Blog extends Widget_Base {
             Group_Control_Border::get_type(), 
             [
                 'name'          => 'premium_blog_format_border',
-                'selector'      => '{{WRAPPER}} .premium-blog-thumbnail-overlay a',
+                'selector'      => '{{WRAPPER}} .premium-blog-thumbnail-overlay i',
             ]
         );
         
@@ -1143,7 +1143,7 @@ class Premium_Blog extends Widget_Base {
                 'type'          => Controls_Manager::SLIDER,
                 'size_units'    => ['px', '%' ,'em'],
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-blog-thumbnail-overlay a' => 'border-radius: {{SIZE}}{{UNIT}};'
+                    '{{WRAPPER}} .premium-blog-thumbnail-overlay i' => 'border-radius: {{SIZE}}{{UNIT}};'
                 ]
             ]
         );
@@ -1154,7 +1154,7 @@ class Premium_Blog extends Widget_Base {
                 'type'          => Controls_Manager::DIMENSIONS,
                 'size_units'    => ['px', 'em', '%'],
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-blog-thumbnail-overlay a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .premium-blog-thumbnail-overlay i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ],
                 'condition'     => [
                     'premium_blog_skin' => 'classic'
@@ -2140,12 +2140,12 @@ class Premium_Blog extends Widget_Base {
                             <?php endif; ?>
                         </div>
                     <?php else: ?>
-                        <div class="premium-blog-thumbnail-overlay">
-                            <?php if( $settings['premium_blog_post_format_icon'] === 'yes' ) : ?>
-                                <a class="elementor-icon" href="<?php the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>">
+                        <div class="premium-blog-thumbnail-overlay">    
+                            <a class="elementor-icon" href="<?php the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>">
+                                <?php if( $settings['premium_blog_post_format_icon'] === 'yes' ) : ?>
                                     <?php echo $this->get_post_format_icon(); ?>
-                                </a>
-                            <?php endif; ?>
+                                <?php endif; ?>
+                            </a>
                         </div>
                     <?php endif; ?>
                 </div>
