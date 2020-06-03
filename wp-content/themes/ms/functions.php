@@ -7,6 +7,7 @@ function ms_supports()
     add_theme_support('menus');
     register_nav_menu('header', 'en tête du menu');
     register_nav_menu('footer', 'pied de page');
+    
 
     add_image_size('post-thumbnail', 350, 215, true);
 }

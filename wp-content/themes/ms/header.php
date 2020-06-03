@@ -7,7 +7,7 @@
     <link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
 </head>   
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-color=#000058 text-white mb-4">
+<nav class="navbar navbar-expand-lg navbar-dark bg-color=#000058 .mb-0 text-white ">
     <a class="navbar-brand" href="#"><?php bloginfo('name') ?></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,6 +24,9 @@
 <?= get_search_form()?>
   </div>
 </nav>
+<div class='banner'>
+
+</div>
 
     <div class="container">
 
