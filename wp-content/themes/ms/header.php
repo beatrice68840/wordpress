@@ -21,8 +21,6 @@
       ]) 
       ?>
 
-<?= get_search_form()?>
-  </div>
 </nav>
 <div class='banner'>
 
