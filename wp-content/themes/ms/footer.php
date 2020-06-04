@@ -6,6 +6,15 @@
      'menu_class'=> 'navbar-nav mr-auto',
      
      ]) ?>
+     <div class="row row-cols-1 row-cols-md-3">
+   
+   <p>CONTACT</br>
+    MÉLISSA STARCK</br>
+    lieu : 68100 MULHOUSE</br>
+    email : mrs.starck.english@gmail.com
+</p>
+   <p>© Site créé par BÉATRICE HATSCH </p> 
+
      </div>
     </footer>
     <?php wp_footer() ?>
