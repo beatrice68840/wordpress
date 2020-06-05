@@ -14,11 +14,11 @@ body{
 
 .navbar ul li a {
     vertical-align: center;
-    padding: 10px;
+    padding: 0.625rem;
     text-decoration: none;
     color:white;
     font-family: Verdana, 'Geneva', Tahoma, sans-serif;
-    font-size: 19px;
+    font-size: 1.188rem;
    
     
 }
@@ -27,19 +27,19 @@ body{
 }
 /* décale les onglets des page dans la navbar*/
 .navbar-brand{
-    margin:0px;
-    padding-top: 0px;
-    padding-right: 250px;
-    padding-bottom: 0px;
+    margin:0rem;
+    padding-top: 0rem;
+    padding-right: 15.625rem;
+    padding-bottom: 0rem;
     font-family: Verdana, 'Geneva', Tahoma, sans-serif;
-    font-size: 17PX;
+    font-size: 1.063rem;
 
 }
 .banner{
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: -340px;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+    margin-left: -21.25rem;
    
 }
 .footer{
@@ -61,10 +61,11 @@ h2{
     font-family:'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue';
 }
 .contact{
-    padding-top: 10px;
-    padding-left: 330px;
+    padding-top: 0.625rem;
+    padding-left: 20.625rem;
 }
 .nom{
-    padding-top: 10px;
-    padding-left: 330px;
+    padding-top: 0.625rem;
+    padding-left: 41.25rem;
+    
 }
