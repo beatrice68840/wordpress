@@ -29,9 +29,9 @@ body{
 .navbar-brand{
     margin:0rem;
     padding-top: 0rem;
-    padding-right: 15.625rem;
+    padding-right: 9.125rem;
     padding-bottom: 0rem;
-    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+    font-family: Verdana, 'Geneva', 'Tahoma', 'sans-serif';
     font-size: 1.063rem;
 
 }
@@ -41,6 +41,9 @@ body{
     margin-bottom: 0rem;
     margin-left: -21.25rem;
    
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .footer{
     width: 100%;
@@ -55,17 +58,17 @@ h1:first-letter{
     color:red;
 }
 h1{
-    font-family:'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif; 
+    font-family:'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'; 
 }
 h2{
     font-family:'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue';
 }
 .contact{
     padding-top: 0.625rem;
-    padding-left: 20.625rem;
+    padding-left: 14rem;
 }
 .nom{
-    padding-top: 0.625rem;
-    padding-left: 41.25rem;
+    padding-top: 0.6250rem;
+    padding-left: 38.25rem;
     
 }
