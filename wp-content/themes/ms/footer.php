@@ -8,8 +8,8 @@
 
         ]) ?>
 
-        <div class="flex-row row-cols-3 row-cols-md-3">
-            <div class='container'>
+        <div class="row row-cols-3 row-cols-md-3">
+            <div class='container flex-container'>
                 <div class='contact'>
                     <p>CONTACT</br>
                         MÉLISSA STARCK</br>
