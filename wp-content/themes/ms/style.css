@@ -39,6 +39,7 @@ body {
 }
 
 .banner {
+    
     margin-top: 0rem;
     margin-right: 0rem;
     margin-bottom: 0rem;
@@ -53,6 +54,7 @@ p {
     width: 100%;
     background-color: #000058;
     color: white;
+    font-size: 0.5rem;
 }
 
 h1:first-letter {
