@@ -1,3 +1,4 @@
+  
 <?php
 
 function ms_supports()
@@ -65,4 +66,3 @@ add_action('after_setup_theme', 'ms_supports');
 add_action('wp_enqueue_scripts', 'ms_register_assets');
 add_filter('nav_menu_css_class', 'ms_menu_class');
 add_filter('nav_menu_link_attributes', 'ms_menu_class');
-
