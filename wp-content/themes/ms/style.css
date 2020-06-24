@@ -26,13 +26,16 @@ body {
 .nav-link {
     text-decoration: none;
 }
+#navbar-collaps{
 
+    justify-content: center;
+}
 /* décale les onglets des page dans la navbar*/
 
 .navbar-brand {
     margin: 0rem;
     padding-top: 0rem;
-    padding-right: 9.125rem;
+    padding-right: 18rem;
     padding-bottom: 0rem;
     font-family: Verdana, 'Geneva', 'Tahoma', 'sans-serif';
     font-size: 1.063rem;

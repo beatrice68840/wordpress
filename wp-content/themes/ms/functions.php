@@ -1,4 +1,3 @@
-  
 <?php
 
 function ms_supports()
@@ -7,6 +6,7 @@ function ms_supports()
     add_theme_support('post-thumbnails');
     add_theme_support('menus');
     register_nav_menu('header', 'en tête du menu');
+    register_nav_menu("mobile ", "Mobile menu");
     register_nav_menu('footer', 'pied de page');
     
 
@@ -37,6 +37,10 @@ function ms_menu_link_class($attrs)
     return $attrs;
 }
 
+function register_navwalker(){
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+
 function ms_pagination()
 {
     $pages = paginate_links(['type' => 'array']);
@@ -64,5 +68,6 @@ function ms_pagination()
 
 add_action('after_setup_theme', 'ms_supports');
 add_action('wp_enqueue_scripts', 'ms_register_assets');
+add_action( 'after_setup_theme', 'register_navwalker' );
 add_filter('nav_menu_css_class', 'ms_menu_class');
 add_filter('nav_menu_link_attributes', 'ms_menu_class');

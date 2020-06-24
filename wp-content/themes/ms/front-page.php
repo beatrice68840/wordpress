@@ -13,7 +13,7 @@
 endif ?>
        
 
-        <?php the_content() ?>
+        
 
         <!--pour afficher le lien sur la page accueil pour les derniers articles-->
         <a class="link" href="<?= get_post_type_archive_link('post') ?>"></a>
