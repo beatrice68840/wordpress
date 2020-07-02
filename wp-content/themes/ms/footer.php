@@ -17,10 +17,15 @@
                         MÉLISSA STARCK</br>
                         lieu : 68100 MULHOUSE</br>
                         email : mrs.starck.english@gmail.com
+<a href="
+https://www.facebook.com/melissa.starck68/?eid=ARDopjVn9Qj9pVEnJ6ks1PrxBrg9kkePG92g29tNfbKg6kW4D0LqwZAoAaOnLxixZiGJIbO2_1UKh-Xw " target="_blank"></a>  
+<i class="fa fa-facebook" aria-hidden="true"></i>
+
+                      
                     </p>
                 </div>
                 <div class='nom'>
-                    <p>© Site créé par BÉATRICE HATSCH </p>
+                    <p>© BÉATRICE HATSCH </p>
                 </div>
             </div>
         </div>
