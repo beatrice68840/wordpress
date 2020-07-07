@@ -16,11 +16,15 @@ function ms_supports()
 function ms_register_assets()
 {
     wp_register_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+    wp_register_style('awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_register_script('bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js", ['popper', 'jquery'], false, true);
     wp_register_script('poppeer', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", [], null, true);
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', [], false, true);
     wp_enqueue_style('bootstrap');
+    wp_enqueue_style('awesome');
     wp_enqueue_script('bootstrap');
+   
+
 }
 
 function ms_menu_class($classes)
